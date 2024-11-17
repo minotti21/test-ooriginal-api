@@ -4,9 +4,10 @@ RUN apt-get update && apt-get install -y libssl-dev pkg-config
 
 WORKDIR /usr/src/ooriginal-qrcode-api
 
-COPY Cargo.toml Cargo.lock ./
+RUN --mount=type=secret,id=database_url \
+    sh -c '. /run/secrets/database_url && echo "DATABASE_URL=$DATABASE_URL"' >> .env
 
-ENV DATABASE_URL="postgresql://postgres.pdxpjrgcttjuxrvabbkd:QyzvWcYR2i3QxiDC@aws-0-sa-east-1.pooler.supabase.com:5432/postgres"
+COPY Cargo.toml Cargo.lock ./
 
 RUN mkdir src
 COPY src ./src
