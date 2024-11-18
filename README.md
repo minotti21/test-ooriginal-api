@@ -4,8 +4,6 @@ Esse projeto é um desafio técnico feito para demonstrar os conhecimentos em um
 
 ## Pré-requisitos
 
-Liste os softwares necessários para rodar o projeto, por exemplo:
-
 - Cargo 1.82 (não testei em versões menores, mas deve funcionar)
 - Docker
 
@@ -15,12 +13,12 @@ Passos para instalar o projeto:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/minotti21/test-ooriginal-front.git
+   git clone https://github.com/minotti21/test-ooriginal-api.git
    ```
 
 2. Navegue para o diretório do projeto:
    ```bash
-   cd nome-do-projeto
+   cd test-ooriginal-api
    ```
 
 3. Crie um arquivo .env na raíz do projeto com a seguinte chave/valor: DATABASE_URL=postgresql://postgres.pdxpjrgcttjuxrvabbkd:QyzvWcYR2i3QxiDC@aws-0-sa-east-1.pooler.supabase.com:5432/postgres
